@@ -566,15 +566,6 @@ public class BulletinBoardClient extends JFrame {
             return;
         }
 
-        // Validate bounds client-side
-        if (x + noteWidth > boardWidth || y + noteHeight > boardHeight) {
-            showError("Note would exceed board boundaries.\n" +
-                    "Board: " + boardWidth + "x" + boardHeight +
-                    ", Note: " + noteWidth + "x" + noteHeight +
-                    ", Position: (" + x + ", " + y + ")");
-            return;
-        }
-
         if (postColorCombo.getSelectedItem() == null) {
             showError("Please select a color.");
             return;
